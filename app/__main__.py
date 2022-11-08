@@ -28,7 +28,7 @@ def main():
         instance_relative_config=True
     )
     # configura os arquivos de definições, app/config.py e app/instance/config.py
-    # app.config.from_object('config')
+    app.config.from_object('config')
     try:
         app.config.from_pyfile('config.py')
     except FileNotFoundError:
