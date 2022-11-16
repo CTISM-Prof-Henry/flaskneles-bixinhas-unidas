@@ -1,25 +1,29 @@
 ```mermaid
 classDiagram
-    class professores {
-        INTEGER id_professor PK
-        TEXT nome,
-        TEXT cabelo,
-        TEXT barba
-    }
-    
-    class materias {
-        INTEGER id_materia PK
+    class CANTOR{
+        INTEGER id_cantor PK 
         TEXT nome
-        INTEGER periodos
+        TEXT numero_de_albuns
+        TEXT sexualidade
+        TEXT pronomes 
     }
-    
-    class professores_para_materias {
-        INTEGER id_professor PK FK
-        INTEGER id_materia PK FK
-        TEXT data_inicio
-        TEXT data_fim 
+    class ALBUNS_PRINCIPAIS{
+        INTEGER id_album PK 
+        TEXT nome
+        TEXT ano
+        TEXT gravadora
     }
-    
-    professores -- professores_para_materias : id_professor
-    materias -- professores_para_materias : id_materia
+     class TOP_5{
+        INTEGER id_cantor PK 
+        TEXT musica_1
+        TEXT musica_2
+        TEXT musica_3
+        TEXT musica_4
+        TEXT musica_5
+    }
+ cantor_album -- CANTOR:id_cantor 
+ cantor_album -- TOP_5:id_cantor
+ cantor_album -- ALBUNS_PRINCIPAIS:id_album
+ cantor_album: INTEGER id_cantor PK FK
+ cantor_album: INTEGER id_album PK FK
 ```
