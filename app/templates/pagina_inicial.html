@@ -16,7 +16,8 @@
     <div class="center white-background">
         <nav>
             <div class="logo">
-                <h4>MENU</h4>
+
+                <h4><a href="pagina_inicial.html#inicio" class="inicio_class">PAGINA INICIAL</h4>
             </div>
             <ul class="nav-links"> 
                 <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
@@ -25,10 +26,10 @@
             <div class="burger">
               <div class="line1"></div>
               <div class="line2"></div>
-              <div class="line3"></div>
             </div>
           </nav>
-    <h1>Cantores LGBTQIA+ Brasileiros</h1>
+          <p>o menu so ira funcionar apos o backend estar rodando pois referenciam rotas e nao paginas</p>      
+    <h1 id="inicio">Cantores LGBTQIA+ Brasileiros</h1>
 
     <p>
         Esta é a sua primeira aplicação Flask. Este site é construído de maneira que
@@ -47,8 +48,6 @@
     <ul class="no-marker">
         <!-- nota: os links abaixo só funcionarão quando o backend estiver funcionando, pois eles referenciam ROTAS,
              e não páginas HTML! -->
-        <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Página gerada pelo servidor</a></li>
-        <li class="no-marker"><a href="{{ url_for('ajax_generated_table') }}">Clique aqui para ver a lista de alguns deles</a></li>
         <!-- começo do trecho de código gerado pelo servidor -->
         {% autoescape false %}
         {{ lista_materias }}

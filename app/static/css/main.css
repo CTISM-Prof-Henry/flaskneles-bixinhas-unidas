@@ -17,11 +17,14 @@ body {
     
 }
 /*ESTILIZAÇÃO DO MENU PAGINA INICIAL*/
+.inicio_class{
+  color: white;
+}
 .logo{
     box-sizing: border-box;
   }
   nav{
-    background:  rgba(220, 119, 220, 0.652);
+    background: #FF99CC;
     display: flex;
     justify-content:space-around;
     align-items: center;
