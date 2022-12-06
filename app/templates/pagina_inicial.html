@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- para o frontend, faça assim -->
-    <link rel="icon" href="../static/img/thumbnail.png">
+    <link rel="icon" href="../static/img/favicon.ico">
     <link rel="stylesheet" href="../static/css/main.css">
     <!-- para o backend, faça assim -->
-    <link rel="icon" href="{{ url_for('static', filename='img/thumbnail.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>QueerBeats 🏳️‍🌈</title>
 </head>
@@ -40,11 +40,6 @@
         servidor, e outra em que uma tabela é gerada por AJAX (o HTML está pré-renderizado,
         e só a tabela é atualizada).
     </p>
-    <p>
-        Clique nos botões abaixo para ver o comportamento destas duas páginas. Depois,
-        investigue o código-fonte para ver como estão implementadas.
-    </p>
-
     <ul class="no-marker">
         <!-- nota: os links abaixo só funcionarão quando o backend estiver funcionando, pois eles referenciam ROTAS,
              e não páginas HTML! -->

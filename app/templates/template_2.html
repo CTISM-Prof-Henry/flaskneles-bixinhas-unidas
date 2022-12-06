@@ -14,6 +14,21 @@
 <body>
 <div class="container">
 <div class="center white-background">
+    <nav>
+            <div class="logo">
+
+                <h4><a href="pagina_inicial.html#inicio" class="inicio_class">PAGINA INICIAL</h4>
+            </div>
+            <ul class="nav-links"> 
+                <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
+                <li class="no-marker"><a href="{{ url_for('ajax_generated_table') }}"> Tabelas </a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </nav>
+          <p>o menu so ira funcionar apos o backend estar rodando pois referenciam rotas e nao paginas</p> 
     <h1 class="center">Página gerada<br/>por Servidor</h1>
     <div>
         <!-- começo do trecho de código gerado pelo servidor -->
