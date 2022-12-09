@@ -13,8 +13,81 @@ body {
     height: 100vh;
     background-attachment: fixed;
     background-size: 100%;
-    background-position: center;
-    
+    background-position: center;   
+}
+*{
+  box-sizing: border-box;
+}
+.music{
+  perspective:600px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+}
+.music_div{
+  margin-left: 50px;
+  width:250px;
+  position: fixed;
+
+}
+span{
+  width:20px;
+  height:30px;
+  margin-left: 1px;
+  background-color: #ACF;
+  display: inline-block;
+  transform-style:preserve-3d;
+  animation: music 1.5s infinite ease-in-out;
+}
+span:nth-of-type(2){
+  animation-delay: 0.2s;    
+}
+span:nth-of-type(3){
+  animation-delay: .4s;
+}
+span:nth-of-type(4){
+  animation-delay: .6s;
+}
+span:nth-of-type(5){
+  animation-delay:.8s;
+}
+span:nth-of-type(6){
+  animation-delay:1s;
+}
+span:nth-of-type(7){
+  animation-delay:1.2s;
+}
+span:nth-of-type(8){
+  animation-delay:1.4s;
+}
+span:nth-of-type(9){
+  animation-delay:1.6s;
+}
+span:last-of-type{
+  animation-delay: 1.8s;
+}
+@keyframes music{
+  0%{
+      height: 50px;
+      background-color: rgb(255, 0, 0);
+  }
+  17%{
+  height:75px;
+  transform:translateZ(30px);
+  background-color: rgb(255, 136, 0);
+  }
+  34%{
+      height: 100px;
+      background-color: rgb(255, 247, 0);
+}
+  51%{
+      background-color: rgb(3, 150, 0);
+}
+68%{
+    background-color: #001eff;
+}
+100%{
+    background-color: #ae00ff;
+}
 }
 /*ESTILIZAÇÃO DO MENU PAGINA INICIAL*/
 .inicio_class{

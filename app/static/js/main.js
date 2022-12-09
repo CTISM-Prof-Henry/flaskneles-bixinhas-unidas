@@ -1,6 +1,7 @@
 function alerta_vermelho() {
     window.alert('Olá mundo! Eu sou uma função Javascript definida no script app/static/js/main.js');
 }
+// NAV DO MENU
 const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -22,6 +23,7 @@ const navSlide = () => {
     });
     //
   };
-  
   navSlide();
-  
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
