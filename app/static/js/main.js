@@ -1,7 +1,7 @@
 function alerta_vermelho() {
     window.alert('Olá mundo! Eu sou uma função Javascript definida no script app/static/js/main.js');
 }
-// NAV DO MENU
+// ADICIONANDO AÇÕES DO MENU DAS PAGINAS
 const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -21,9 +21,24 @@ const navSlide = () => {
       });
       burger.classList.toggle("toggle");
     });
-    //
   };
-  navSlide();
-  $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
+// ADICIONANDO MODAL DA PAGINA INICIAL
+const switchModal = () => {
+  const modal = document.querySelector('.modal')
+  const actualStyle = modal.style.display
+  if(actualStyle == 'block') {
+    modal.style.display = 'none'
+  }
+  else {
+    modal.style.display = 'block'
+  }
+}
+const btn = document.querySelector('.modalBtn')
+btn.addEventListener('click', switchModal)
+
+window.onclick = function(event) {
+    const modal = document.querySelector('.modal')
+  if (event.target == modal) {
+    switchModal()
+  }
+}
