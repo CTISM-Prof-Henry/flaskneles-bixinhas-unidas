@@ -108,7 +108,7 @@ class FrontendTester(unittest.TestCase):
         passing = []
 
         for some_file in files:
-            with open(os.path.join(html_path, some_file), 'r') as html_file:
+            with open(os.path.join(html_path, some_file), 'r', encoding='utf-8') as html_file:
                 document = '\n'.join(html_file.readlines())
 
                 parser = MyHTMLParser()
@@ -143,7 +143,7 @@ class FrontendTester(unittest.TestCase):
         counts = dict()
 
         for some_file in files:
-            with open(os.path.join(html_path, some_file), 'r') as html_file:
+            with open(os.path.join(html_path, some_file), 'r', encoding='utf-8') as html_file:
                 document = '\n'.join(html_file.readlines())
 
                 parser = MyHTMLParser()
@@ -153,7 +153,7 @@ class FrontendTester(unittest.TestCase):
 
         contagem_str = '\n'.join(['{0}: {1}'.format(k, v) for k, v in counts.items()])
 
-        self.assertTrue(any(passing), 'Alguma página HTML deve ter no mínimo 15 tags!\n' + contagem_str)
+        self.assertTrue(any(passing), 'Alguma página HTML deve ter no mínimo 20 tags!\n' + contagem_str)
 
     def test_html_form_tag(self):
         html_path = self.get_html_path()
@@ -162,7 +162,7 @@ class FrontendTester(unittest.TestCase):
         passing = []
 
         for some_file in files:
-            with open(os.path.join(html_path, some_file), 'r') as html_file:
+            with open(os.path.join(html_path, some_file), 'r', encoding='utf-8') as html_file:
                 document = '\n'.join(html_file.readlines())
 
                 parser = MyHTMLParser()
@@ -178,7 +178,7 @@ class FrontendTester(unittest.TestCase):
         passing = []
 
         for some_file in files:
-            with open(os.path.join(html_path, some_file), 'r') as html_file:
+            with open(os.path.join(html_path, some_file), 'r', encoding='utf-8') as html_file:
                 document = '\n'.join(html_file.readlines())
 
                 parser = MyHTMLParser()
