@@ -36,30 +36,25 @@ div.container{
     padding-left: 30px;
     padding-right: 30px;
 }
-
 /* se aplica a todos os elementos com a classe center que não foram especificados abaixo */
 .center {
     margin: auto;
     width: 50%;
 }
-
 /* ESTILIZAÇÃO TODOS OS TITULOS H1 CENTER*/
 h1.center {
     text-align: center;
 }
-
 /* se aplica apenas a parágrafos com a classe center */
 p.center {
     text-align: center;
 }
-
 /* se aplica apenas a imagens com a classe center */
 img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 li.no-marker {
     list-style: none;
 }
@@ -77,7 +72,6 @@ li.no-marker {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -86,7 +80,6 @@ li.no-marker {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -94,15 +87,12 @@ li.no-marker {
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
-
 /*ESTILIZAÇÃO DO MENU PAGINA INICIAL*/
 .inicio_class{
   color: white;
@@ -166,12 +156,10 @@ li.no-marker {
     }
     .nav-links a{
       opacity: 0;
-   
     }
     .burger{
       display: block;
     }
-   
   }
   @media only screen and (max-width: 640px){
     nav{
@@ -213,7 +201,6 @@ li.no-marker {
 .corpo{
   position: fixed;
 }
-
 /*LOGIN*/
 .login{
   margin-left: 13%;
