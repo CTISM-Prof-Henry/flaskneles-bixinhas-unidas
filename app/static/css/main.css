@@ -1,5 +1,8 @@
 /*DEFINE COMO TUDO COM ESTA FONTE*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+*{
+  overflow: auto; 
+}
 /* ESTILIZAÇÃO BODY */
 body {
     margin-top: 0;
@@ -8,12 +11,57 @@ body {
     margin-right: 0;
     background-image: url('https://media.them.us/photos/5b1ef721bfa1890010f0e15e/master/pass/new-pride-flag-01.jpg');
     height: 100vh;
-    background-attachment: fixed;
-    background-size: 100%;
-    background-position: center;   
+    background-attachment: local;
+    background-size: 100%; 
 }
 *{
   box-sizing: border-box;
+}
+/*ESTILIZAÇAO SOBREPOSIÇÃO DO BACKGROUND*/
+div.container{
+    margin-top: 0;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    background: #000000b6;
+    background-size: 150%;
+}
+/*ESTILIZAÇÃO ESPAÇO AO CENTRO COM AS INFORMAÇÕES*/
+.white-background {
+    background-attachment: fixed, scroll;
+    background-repeat: no-repeat, repeat-y;
+    font-family: 'Kanit', sans-serif;
+    background-color: white;
+    height: 100vh;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* se aplica a todos os elementos com a classe center que não foram especificados abaixo */
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+/* ESTILIZAÇÃO TODOS OS TITULOS H1 CENTER*/
+h1.center {
+    text-align: center;
+}
+
+/* se aplica apenas a parágrafos com a classe center */
+p.center {
+    text-align: center;
+}
+
+/* se aplica apenas a imagens com a classe center */
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li.no-marker {
+    list-style: none;
 }
 /*ESTILIZAÇÃO DO MODAL*/
 .modal {
@@ -226,48 +274,3 @@ span:last-of-type{
   .toggle .line3{
      transform: rotate(45deg) translate(-5px,-6px );
   }
-/*ESTILIZAÇAO SOBREPOSIÇÃO DO BACKGROUND*/
-div.container{
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    background: #000000b6;
-    background-size: 150%;
-}
-/*ESTILIZAÇÃO ESPAÇO AO CENTRO COM AS INFORMAÇÕES*/
-.white-background {
-    font-family: 'Kanit', sans-serif;
-    background-color: white;
-    height: 100vh;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-/* se aplica a todos os elementos com a classe center que não foram especificados abaixo */
-.center {
-    margin: auto;
-    width: 50%;
-}
-
-/* ESTILIZAÇÃO TODOS OS TITULOS H1 CENTER*/
-h1.center {
-    text-align: center;
-}
-
-/* se aplica apenas a parágrafos com a classe center */
-p.center {
-    text-align: center;
-}
-
-/* se aplica apenas a imagens com a classe center */
-img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-li.no-marker {
-    list-style: none;
-}
