@@ -25,7 +25,7 @@
                   <li class="no-marker"><a href="{{ url_for('ajax_generated_table') }}"> Tabelas </a></li>
                   <li class="no-marker"><a href="pagina_inicial.html#cadastro">Login</a></li>
               </ul>
-              <div class="burger">
+              <div class="burger" onclick="navSlide()">
                 <div class="line1"></div>
                 <div class="line2"></div>
               </div>
@@ -36,6 +36,17 @@
       <p>
           Olá, bem-vinde ao QueerBeats, o seu site de referencias musicais LGBTQIA+ no Basil e no mundo!
       </p>
+        <button id="myBtn" onclick="modal()">Veja Algumas de nossas Playlists</button>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p><a href="https://deezer.page.link/76CSCH1BxM5txtWf6">Carol Biazin, Elana Dara, DAY, Lud Session</a><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/10914509642" width="100%" height="160" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+              <p><a href="https://open.spotify.com/playlist/05Kncvimzfxnqs63UZ36So?si=5272c52e3f9a4bd7"> Viadinhos Homossexuais</a><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/05Kncvimzfxnqs63UZ36So?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+              <p><a href="https://deezer.page.link/Q3QvYV7Ks97uVBTCA"> Little Mix (Todas as Musicas)</a><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/10435438082" width="100%" height="160" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+            </div>
+          </div>
           <p>
           Existem duas páginas de exemplo: uma em que todo o HTML da página Web é gerado pelo
           servidor, e outra em que uma tabela é gerada por AJAX (o HTML está pré-renderizado,
