@@ -28,19 +28,18 @@
               <div class="line2"></div>
             </div>
           </nav>
-          <p>o menu so ira funcionar apos o backend estar rodando pois referenciam rotas e nao paginas</p>    
     <h1 class="center">Está na hora de ouvir música!</h1>
-
+    <img alt="tulla_yey" class="center" src="{{ url_for('static', filename='img/the_web_diva.jpg') }}">
     <p>
-        Escolha seu artista favorito da nossa seleção musical abaixo para checar alguns de seus hits!
+        Escolha aqui se quiser dar uma checada nos artistas que compõem nossa seleção, conhecer um pouco de sua discografia ou escutar seus maiores hits!
     </p>
     <label for="select_tables"></label>
     <select name="select_tables" id="select_tables">
-        <option value="professores">Professores</option>
-        <option value="materias">Matérias</option>
-        <option value="professores_para_materias">Professores para Matérias</option>
+        <option value="cantores">Cantores</option>
+        <option value="albuns">Albúns</option>
+        <option value="hits">Maiores hits</option>
     </select>
-    <button id="button_generate_table">Clique aqui!</button>
+    <button id="button_generate_table">Confirma</button>
     <button id="alerta" onclick="alerta_vermelho()">Alerta</button>
 
     <table id="answer_table">
