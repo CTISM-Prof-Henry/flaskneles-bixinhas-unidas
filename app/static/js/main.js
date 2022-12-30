@@ -21,5 +21,4 @@ const navSlide = () => {
       });
       burger.classList.toggle("toggle");
     });
-  };
-// ADICIONANDO MODAL DA PAGINA INICIAL
+  }

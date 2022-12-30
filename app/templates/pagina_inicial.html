@@ -36,22 +36,6 @@
       <p>
           Olá, bem-vinde ao QueerBeats, o seu site de referencias musicais LGBTQIA+ no Basil e no mundo!
       </p>
-      <!--EQUALIZADOR ANIMADO -->
-      <body class="music">
-
-          <div id="spans" class="music_div">
-                <span></span>
-                <span></span>
-                <span></span>    
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-          </div>
-          </body>
-           <!-- FIM DO EQUALIZADOR ANIMADO -->
-          <br><br><br><br><br><br>
           <p>
           Existem duas páginas de exemplo: uma em que todo o HTML da página Web é gerado pelo
           servidor, e outra em que uma tabela é gerada por AJAX (o HTML está pré-renderizado,
@@ -72,8 +56,25 @@
       {{ shia }}
       {% endautoescape %}
       <!-- fim do trecho de código gerado pelo servidor -->
-      <h3 id="cadastro">Você ja possui Cadastro?</h3>
-  </div>
+      <div>
+        <!--ITEM LOGIN-->
+        <h1 id="cadastro"> <bold>Você ja possui Cadastro? </bold></h1>
+          <p>Faça Login para ficar atualizado de todas as musicas e informações da comunidade!</p>
+          <br>
+          <form method="POST" class="login">
+            <!-- ADICIONANDO OS CAMPOS PARA LOGIN-->
+          <input type="text" name="user" placeholder="User:" autocomplete="off">&nbsp;&nbsp;&nbsp;<input type="e-mail" name="login" placeholder="Login:" autocomplete="off"> <br> 
+          <!--ITEM LOGIN SO ACEITANDO EMAIL E SEM AUTOCOMPLETAR-->
+          <br>
+          <input name="password1" type="password" placeholder="Senha:" id="password" autocomplete="off"/>&nbsp;&nbsp;&nbsp;<input name="password2" type="password" placeholder="Confirme sua senha:" id="password" autocomplete="off"/><br>
+          <br>
+          <input type="submit" name="Entrar" value="Entrar">
+          <br>
+          <br>
+      </form>
+      </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
