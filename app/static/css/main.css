@@ -59,6 +59,19 @@ li.no-marker {
     list-style: none;
 }
 /*MODAL BY https://www.w3schools.com/howto/howto_css_modals.asp*/
+.myBtn{
+  font-family: 'Kanit', sans-serif;
+  padding:8px;
+  padding-top: 4px;
+  border: 1px solid #e412b3;
+  background-color: #FF99CC;
+  color: #000000;
+  border-radius: 7px 7px 7px 7px;
+  size: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -124,33 +137,35 @@ li.no-marker {
   }
   .nav-links a:hover{
     color:#38b8ff;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
   }
   .burger{
     display: none;
   }
   .burger div{
-    width: 25px;
+    width: 15px;
     height: 3px;
     background: #fff;
     margin: 5px;
     transition:all 0.5s ease;
   }
-  @media only screen and (max-width: 760px){
+  @media only screen and (max-width: 1300px){
      nav{
       justify-content: space-between;
-      padding: 0 5vw;
+      padding: 20px;
     }
     .nav-links{
       position: absolute;
-      min-height:92vh;
+      max-height:100vh;
       background: rgba(220, 119, 220, 0.652);
       display: flex;
       flex-direction: column;
-      align-items: center;   
-      width: 100%;
-      margin: 0;
-      padding: 0;
+      align-items: center;
+      max-width: 500vh;
+      height: 50%;
+      margin-top: 100px;
+      margin-left: 600px;
+      padding-right: 400px ;
       transform: translateX(100%);
       transition:All 0.5s ease-in;
     }
@@ -161,7 +176,7 @@ li.no-marker {
       display: block;
     }
   }
-  @media only screen and (max-width: 640px){
+  @media only screen and (max-width: 1200px){
     nav{
       justify-content: space-between;
       padding: 0 5vw;
@@ -170,9 +185,9 @@ li.no-marker {
   .nav-active{
     transform: translateX(0);
   }
-  @media only screen and (max-width: 460px){
+ @media only screen and (max-width: 1270px){
     .nav-links{
-      width: 100%;
+      width: 50%;
       transition:All 0.5s ease;
     }
   }
@@ -202,60 +217,62 @@ li.no-marker {
   position: fixed;
 }
 /*LOGIN*/
-.login{
-  margin-left: 13%;
-}
-input[type='submit']{
-  font-family: 'Kanit', sans-serif;
-  padding:10px;
-  padding-top: 4px;
-  border: solid #e412b3;
-  background-color:  #FF99CC;
-  font-size: 14px;
-  color: #403d3d;
-  border-radius: 7px 7px 7px 7px;
-  size: 15px;
-  display: flex;
-  border-width: 2px;
-  margin-left: 33%;
-}
-input[type='text']{
-  font-family: 'Kanit', sans-serif;
-  padding: 10px;
-  border: 1px solid #e412b3;
-  background-color: #FF99CC;
-  color: black;
-  border-radius: 20px 20px 20px 20px;
-  size: 10px;
-}
-input[type='e-mail']{
-  font-family: 'Kanit', sans-serif;
-  padding: 10px;
-  border: 1px solid #e412b3;
-  background-color: #FF99CC;
-  color: black;
-  border-radius: 20px 20px 20px 20px;
-  size: 10px;
-}
-input[type='password']{
-  font-family: 'Kanit', sans-serif;
-  padding: 10px;
-  border: 1px solid#e412b3;
-  background-color: #FF99CC;
-  color: black;
-  border-radius: 20px 20px 20px 20px;
-  size: 10px;
-}
-input[type='button']{
-  font-family: 'Kanit', sans-serif;
-  padding:8px;
-  padding-top: 4px;
-  border: 1px solid #e412b3;
-  background-color: #FF99CC; 
-  color: #e412b3;
-  border-radius: 7px 7px 7px 7px;
-  size: 10px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
+    .login{
+      margin:center;
+    }
+    input[type='submit']{
+      font-family: 'Kanit', sans-serif;
+      padding:10px;
+      padding-top: 4px;
+      border: solid #e412b3;
+      background-color:  #FF99CC;
+      font-size: 14px;
+      color: #403d3d;
+      border-radius: 7px 7px 7px 7px;
+      size: 15px;
+      display: flex;
+      border-width: 2px;
+      margin-left: 33%;
+    }
+    input[type='text']{
+      font-family: 'Kanit', sans-serif;
+      padding: 10px;
+      border: 1px solid #e412b3;
+      background-color: #FF99CC;
+      color: black;
+      border-radius: 20px 20px 20px 20px;
+      size: 10px;
+    }
+    input[type='e-mail']{
+      font-family: 'Kanit', sans-serif;
+      padding: 10px;
+      border: 1px solid #e412b3;
+      background-color: #FF99CC;
+      color: black;
+      border-radius: 20px 20px 20px 20px;
+      size: 10px;
+    }
+    input[type='password']{
+      font-family: 'Kanit', sans-serif;
+      padding: 10px;
+      border: 1px solid#e412b3;
+      background-color: #FF99CC;
+      color: black;
+      border-radius: 20px 20px 20px 20px;
+      size: 10px;
+    }
+    input[type='button']{
+      font-family: 'Kanit', sans-serif;
+      padding:8px;
+      padding-top: 4px;
+      padding-right: 50px;
+      border: 1px solid #e412b3;
+      background-color: #FF99CC;
+      color: #e412b3;
+      border-radius: 7px 7px 7px 7px;
+      size: 10px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
