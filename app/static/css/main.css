@@ -58,6 +58,10 @@ img.center {
 li.no-marker {
     list-style: none;
 }
+.imagem1{
+  width: 100px;
+
+}
 /*MODAL BY https://www.w3schools.com/howto/howto_css_modals.asp*/
 .modal {
   display: none; /* Hidden by default */
@@ -73,6 +77,11 @@ li.no-marker {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 /* Modal Content/Box */
+.mybtn{
+  background-color:  white;
+  border: 0px;
+  
+}
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */

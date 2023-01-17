@@ -88,39 +88,39 @@ e abrir a URL que aparecer na tela: http://127.0.0.1:5000
 
 ### HTML
 
-* [ ] **(0.5 pt)** 🤖 No mínimo três templates HTML
-* [ ] **(1 pt)** 🤖 No mínimo 20 tags HTML em alguma página
+* [ X ] **(0.5 pt)** 🤖 No mínimo três templates HTML
+* [ X ] **(1 pt)** 🤖 No mínimo 20 tags HTML em alguma página
   * `<html>`, `<body>`, `<h1>`, `<p>`, `<img>`, etc
-* [ ] **(1 pt)** 🤖 Alguma página faz uso de [formulários](https://www.w3schools.com/html/html_forms.asp)
-* [ ] **(1 pt)** 🤖 Alguma página tem uma funcionalidade que faz uso de código-fonte Javascript
+* [ X ] **(1 pt)** 🤖 Alguma página faz uso de [formulários](https://www.w3schools.com/html/html_forms.asp)
+* [ X ] **(1 pt)** 🤖 Alguma página tem uma funcionalidade que faz uso de código-fonte Javascript
   * Por exemplo, clicar em um botão e abrir um [modal](https://getbootstrap.com/docs/4.0/components/modal/), ou então
     abrir um [menu lateral](https://bootstrapious.com/p/bootstrap-sidebar), etc
   * Você pode implementar qualquer funcionalidade. Seja criativo!
   * 🖥 Exemplo (botão alerta): [app/templates/template_1.html](app/templates/template_1.html)
-* [ ] **(1 pt)** Uma página inicial (bonita)
+* [ X ] **(1 pt)** Uma página inicial (bonita)
   * Por exemplo, se o tema do seu trabalho for de receitas culinárias, você pode se inspirar na página inicial do site
     Tudo Gostoso: https://www.tudogostoso.com.br
   * Exemplo no projeto: [app/templates/pagina_inicial.html](app/templates/pagina_inicial.html)
-* [ ] **(1 pt)** Uma página de erro 404 (bonita)
+* [ X ] **(1 pt)** Uma página de erro 404 (bonita)
   * Exemplo no projeto: [app/templates/404.html](app/templates/404.html)
 
 ### CSS
 
-* [ ] **(0.5 pt)** 🤖 No máximo um arquivo CSS
+* [ X ] **(0.5 pt)** 🤖 No máximo um arquivo CSS
   * Deve ser adicionado externamente à todas as páginas HTML
-* [ ] **(1 pt)** 🤖 No mínimo 15 definições CSS
+* [ X ] **(1 pt)** 🤖 No mínimo 15 definições CSS
   * O arquivo [app/static/css/main.css](app/static/css/main.css) possui 8 definições.
-* [ ] **(0.5 pt)** 🤖 Pelo menos uma fonte é do [Google Fonts](https://fonts.google.com/)
+* [ X ] **(0.5 pt)** 🤖 Pelo menos uma fonte é do [Google Fonts](https://fonts.google.com/)
   * O repositório [pythonFlask](https://github.com/CTISM-Prof-Henry/pythonFlask/blob/main/tutoriais/fontes/como_inserir_fontes.md) 
     possui um tutorial na seção de referências
-* [ ] (opcional) O site possui uma paleta de cores 
+* [ X ] (opcional) O site possui uma paleta de cores 
   * Você pode usar os sites [Coolors](https://coolors.co/) e [Viz Palette](https://projects.susielu.com/viz-palette)
     para montar uma paleta de cores.
   * A paleta de cores influencia na beleza da página inicial e na página de erros.
 
 ### Javascript
 
-* [ ] **(1 pt)** 🤖 No mínimo um arquivo JS
+* [ X ] **(1 pt)** 🤖 No mínimo um arquivo JS
   * Pode ser usado para colocar o código-fonte AJAX da segunda parte (opcional e mais difícil), ou então algum código 
     Javascript pertinente (recomendado e mais fácil) 
   * Por exemplo, se o tema do seu trabalho for de receitas culinárias, você pode colocar neste arquivo o código-fonte
@@ -128,24 +128,24 @@ e abrir a URL que aparecer na tela: http://127.0.0.1:5000
 
 ### Modelagem do Banco 
 
-* [ ] **(1 pt)** Modelagem do banco de dados feita utilizando a biblioteca 
+* [ X ] **(1 pt)** Modelagem do banco de dados feita utilizando a biblioteca 
   [mermaid](https://mermaid-js.github.io/mermaid/#/), e escrita no arquivo [diagrama.md](diagrama.md).
-  * [ ] Pelo menos 3 tabelas
-  * [ ] No mínimo 2 colunas por tabela 
-  * [ ] Pelo menos uma tabela com 4 colunas 
-  * [ ] Pelo menos 2 tuplas por tabela
-  * [ ] Uma tabela com 10 tuplas
-  * [ ] Todas as tabelas possuem chave primária (primary key, PK)
-  * [ ] Pelo menos uma tabela possui chave primária composta (e.g. duas colunas)
-  * [ ] Pelo menos duas tabelas possuem chave estrangeira (foreign key, FK)
-  * [ ] O banco de dados é original. Nenhum outro grupo pegou o mesmo tema que o tema do seu grupo
+  * [ X ] Pelo menos 3 tabelas
+  * [ X ] No mínimo 2 colunas por tabela 
+  * [ X ] Pelo menos uma tabela com 4 colunas 
+  * [ X ] Pelo menos 2 tuplas por tabela
+  * [ X ] Uma tabela com 10 tuplas
+  * [ X ] Todas as tabelas possuem chave primária (primary key, PK)
+  * [ X ] Pelo menos uma tabela possui chave primária composta (e.g. duas colunas)
+  * [ X ] Pelo menos duas tabelas possuem chave estrangeira (foreign key, FK)
+  * [ X ] O banco de dados é original. Nenhum outro grupo pegou o mesmo tema que o tema do seu grupo
   * Confira o [exemplo pré-pronto](diagrama.md) que está disponibilizado neste arquivo. Você pode usar o site 
     [mermaid.live](mermaid.live) para fazer o diagrama, e depois copiar-e-colar o código no arquivo 
     [diagrama.md](diagrama.md).
 
 ### Outros requisitos
 
-* [ ] **(0.5 pt)** 🤖 um favicon personalizado
+* [ X ] **(0.5 pt)** 🤖 um favicon personalizado
   * favicon é o logo do site, que é mostrado na barra de endereços do navegador
   * Veja o exemplo em [app/static/img/favicon.ico](app/static/img/favicon.ico)
 
@@ -153,17 +153,17 @@ e abrir a URL que aparecer na tela: http://127.0.0.1:5000
 
 ### Banco de Dados
 
-* [ ] **(2 pts)** 🤖 Banco de dados (pronto), com um arquivo de nome `script.sql` na pasta 
+* [ X ] **(2 pts)** 🤖 Banco de dados (pronto), com um arquivo de nome `script.sql` na pasta 
   [app/static/database](app/static/database) 
-  * [ ] 🤖 Pelo menos 3 tabelas
-  * [ ] 🤖 No mínimo 2 colunas por tabela 
-  * [ ] 🤖 Pelo menos uma tabela com 4 colunas 
-  * [ ] 🤖 Pelo menos 2 tuplas por tabela
-  * [ ] 🤖 Uma tabela com 10 tuplas
-  * [ ] 🤖 Todas as tabelas possuem chave primária (primary key, PK)
-  * [ ] 🤖 Pelo menos uma tabela possui chave primária composta (e.g. duas colunas)
-  * [ ] 🤖 Pelo menos duas tabelas possuem chave estrangeira (foreign key, FK)
-  * [ ] 🤖 O banco de dados é original. Nenhum outro grupo pegou o mesmo tema que o tema do seu grupo
+  * [ X ] 🤖 Pelo menos 3 tabelas
+  * [ X ] 🤖 No mínimo 2 colunas por tabela 
+  * [ X ] 🤖 Pelo menos uma tabela com 4 colunas 
+  * [ X ] 🤖 Pelo menos 2 tuplas por tabela
+  * [ X ] 🤖 Uma tabela com 10 tuplas
+  * [ X ] 🤖 Todas as tabelas possuem chave primária (primary key, PK)
+  * [ X ] 🤖 Pelo menos uma tabela possui chave primária composta (e.g. duas colunas)
+  * [ X ] 🤖 Pelo menos duas tabelas possuem chave estrangeira (foreign key, FK)
+  * [ X ] 🤖 O banco de dados é original. Nenhum outro grupo pegou o mesmo tema que o tema do seu grupo
 
 ### Páginas e Roteamento
 
