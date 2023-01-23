@@ -175,12 +175,12 @@ e abrir a URL que aparecer na tela: http://127.0.0.1:5000
   * Template: [app/templates/pagina_inicial.html](app/templates/pagina_inicial.html)
   * 🖥️ Página renderizada: [http://127.0.0.1:5000](http://127.0.0.1:5000)
   * Código-fonte: [app/views.py](app/views.py) (método `initial_page`)
-* [ ] **(2 pts)** Alguma página faz uso de código-fonte AJAX
+* [x] **(2 pts)** Alguma página faz uso de código-fonte AJAX
   * Template: [app/templates/template_1.html](app/templates/template_1.html)
   * 🖥️ Página renderizada: [http://127.0.0.1:5000/ajax_generated_table](http://127.0.0.1:5000/ajax_generated_table)
   * Código-fonte: [app/views.py](app/views.py) (método `ajax_generated_page`) e [app/models.py](app/models.py) (método
     `generate_table`)
-* [ ] **(2 pt)** Todos os templates HTML foram atualizados para usar `url_for`, para links, imagens, CSS, Javascript, etc
+* [x] **(2 pt)** Todos os templates HTML foram atualizados para usar `url_for`, para links, imagens, CSS, Javascript, etc
   * Todos os templates em [app/templates](app/templates) estão configurados para funcionar tanto estaticamente quanto 
     dinamicamente
   
