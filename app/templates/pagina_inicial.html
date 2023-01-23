@@ -10,6 +10,7 @@
     <!-- ROTA PARA O BACK-END -->
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="text/javascript" href="{{ url_for('static', filename='js/main.js') }}">
     <title>QueerBeats 🏳️‍🌈</title>
 </head>
 <body>
@@ -23,28 +24,24 @@
               <ul class="nav-links">
                   <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
                   <li class="no-marker"><a href="{{ url_for('ajax_generated_table') }}"> Tabelas </a></li>
-                  <li class="no-marker"><a href="pagina_inicial.html#cadastro">Login</a></li>
               </ul>
               <div class="burger" onclick="navSlide()">
                 <div class="line1"></div>
                 <div class="line2"></div>
               </div>
             </nav>
-            <p>o menu so ira funcionar apos o backend estar rodando pois referenciam rotas e nao paginas</p>      
       <h1 id="inicio">MÚSICA LGBTQIA+</h1>
 
       <p>
           Olá, bem-vinde ao QueerBeats, o seu site de referencias musicais LGBTQIA+ no Basil e no mundo!
       </p>
-<<<<<<< HEAD
       <p></p>
-        <button id="myBtn" class="mybtn" onclick="modal()"><img src="../static/img/catalyzer_UwU.gif"><a>Veja alguma de nossas playlists clicando aqui, neste equalizador</a></button>
+      <img src="../static/img/catalyzer_UwU.gif">
          
         <!-- The Modal -->
-=======
         <button id="myBtn" class="myBtn" onclick="modal()">Veja Algumas de nossas Playlists</button>
           <!-- The Modal -->
->>>>>>> 32a5d673cf376b7a17fe0887c6893939c37b3cb7
+
           <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
@@ -75,11 +72,6 @@
           <!-- fim do trecho de código gerado pelo servidor -->
       </ul>
 
-      <!-- começo do trecho de código gerado pelo servidor -->
-      {% autoescape false %}
-      {{ shia }}
-      {% endautoescape %}
-      <!-- fim do trecho de código gerado pelo servidor -->
       <div>
         <!--ITEM LOGIN-->
         <h1 id="cadastro"> <bold>Você ja possui Cadastro? </bold></h1>

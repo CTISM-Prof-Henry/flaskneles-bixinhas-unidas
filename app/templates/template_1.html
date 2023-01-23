@@ -9,6 +9,7 @@
     <!-- para o backend, faça assim -->
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script type="text/javascript" src="../static/js/main.js"></script>
     <title>Artistas LGBTQIA+</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
       <nav>
             <div class="logo">
 
-                <h4><a href="pagina_inicial.html#inicio" class="inicio_class">PAGINA INICIAL</h4>
+                <h4><a class="inicio_class">PAGINA INICIA </a></h4>
             </div>
             <ul class="nav-links"> 
                 <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
@@ -29,18 +30,20 @@
             </div>
           </nav>
     <h1 class="center">Está na hora de ouvir música!</h1>
-    <!--IMAGEM SO COM O SERVIDOR <img alt="the_web_diva" class="center" src="{{ url_for('static', filename='img/the_web_diva.jpg') }}">-->
-    <!--IMAGEM PARA SOMENTE HTML--><img class="imagem1" src="../static/img/catalyzer_UwU.gif">
+    <img alt="the_web_diva" class="center" src="{{ url_for('static', filename='img/the_web_diva.jpg') }}">
+    <img class="imagem1" src="../static/img/catalyzer_UwU.gif" alt="">
     <p>
         Escolha aqui se quiser dar uma checada nos artistas que compõem nossa seleção, conhecer um pouco de sua discografia ou escutar seus maiores hits!
     </p>
-    <label for="select_tables"></label>
+    <form id="table_select" action="http://localhost:5000/generete_table" method="POST"></form>
+    <label for="select_tables"> </label>
     <select name="select_tables" id="select_tables">
-        <option value="cantores">Cantores</option>
+        <option value="cantores">Cantores </option>
         <option value="albuns">Albúns</option>
         <option value="hits">Maiores hits</option>
+        <option value="ids">Cantores e albuns (ids)</option>
     </select>
-    <button id="button_generate_table">Confirma</button>
+    <button id="button_table_select">Confirmar</button>
     <button id="alerta" onclick="alerta_vermelho()">Alerta</button>
 
     <table id="answer_table">
@@ -55,13 +58,9 @@
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous">
 </script>
-<!-- para o frontend, faça assim -->
-<script type="application/javascript" src="../static/js/main.js"></script>
-<!-- para o backend, faça assim -->
-<script type="application/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 <!-- código AJAX -->
 <script type="application/javascript">
-    $("#button_generate_table").on("click", function(event) {
+   $("#button_table_select").on("click", function(event) {
     event.preventDefault(); // o usuário precisa selecionar um valor diferente do default, senão não envia a requisição
 
     $.ajax({
@@ -103,6 +102,6 @@
         }
     });
 });
-<!-- código AJAX -->
 </script>
+<!-- código AJAX -->
 </html>

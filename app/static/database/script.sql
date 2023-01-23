@@ -6,7 +6,7 @@ CREATE TABLE CANTORES (
             sexualidade TEXT NOT NULL,
             pronomes TEXT NOT NULL,
             n_de_albuns INTEGER NOT NULL,
-            PRIMARY KEY (id_materia)
+            PRIMARY KEY (id_cantor)
         );
 INSERT INTO CANTORES VALUES(001,'Jao', 'Bissexual', 'ELE/DELE', 4);
 INSERT INTO CANTORES VALUES(002,'Pabllo Vittar', 'GAY','ELA/DELA', 10);
@@ -27,15 +27,15 @@ INSERT INTO CANTORES VALUES(016,'Gabeu', 'GAY', 'ELE/DELE', 1);
 INSERT INTO CANTORES VALUES(017,'Elana Dara', 'BISSEXUAL', 'ELA/DELA', 1);
 
 
-
-
 CREATE TABLE ALBUNS (
             id_album INTEGER NOT NULL,
             nome TEXT NOT NULL,
+            nome_album TEXT NOT NULL,
             gravadora TEXT NOT NULL,
             ano INTEGER NOT NULL,
             PRIMARY KEY (id_album)
-        );INSERT INTO CANTOR_ALBUM VALUES(101, 'Jão','Pirata', 'Universal', 2021);
+        );
+INSERT INTO ALBUNS VALUES(101, 'Jão','Pirata', 'Universal', 2021);
 INSERT INTO ALBUNS VALUES(102, 'Jão', 'Anti-Herói', 'Universal', 2019);
 INSERT INTO ALBUNS VALUES(103,'Jão', 'Lobos', 'Universal', 2018);
 INSERT INTO ALBUNS VALUES(104, 'Pabllo Vittar', 'Batidão Tropical', 'Sony', 2021);
@@ -79,9 +79,9 @@ CREATE TABLE TOP_5 (
             musica_2 TEXT NOT NULL,
             musica_3 TEXT NOT NULL,
             musica_4 TEXT NOT NULL,
-            musica_4 TEXT NOT NULL,
             musica_5 TEXT NOT NULL,
-            FOREIGN KEY (id_cantor)
+            PRIMARY KEY (id_cantor),
+            FOREIGN KEY (id_cantor) REFERENCES CANTORES(id_cantor)
         );
 INSERT INTO TOP_5 VALUES(001,'Idiota', 'Meninos e Meninas', 'Acontece', 'Imaturo', 'Essa eu fiz pro nosso amor');
 INSERT INTO TOP_5 VALUES(002,'Disk me', 'Amor de que', 'K.O', 'Triste com T', 'Indestrutivel');

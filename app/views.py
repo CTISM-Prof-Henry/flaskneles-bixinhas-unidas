@@ -3,6 +3,8 @@ Arquivo com definições de roteamento para a aplicação.
 
 É uma boa prática de programação colocar o mesmo nome do roteamento, da função e do arquivo HTML.
 """
+import os
+import sqlite3
 
 import flask
 
@@ -20,69 +22,58 @@ def main(app: flask.app.Flask) -> flask.app.Flask:
     @app.route('/')
     def initial_page():
         try:
-            materias = query_function('''SELECT id_materia, nome FROM materias''')
-            texto_lista_materias = ''
-            for materia in materias:
-                id_materia = materia[0]
-                nome_materia = materia[1]
-                rota = 'materias/{0}'.format(id_materia)
-                texto_lista_materias += '<li class="no-marker"><a href="{0}">{1}</a></li>\n'.format(rota, nome_materia)
+            CANTOR = query_function('''SELECT Id_cantor, nome FROM CANTORES''')
+            texto_lista_cantores = ''
+            for CANTOR in CANTOR:
+                id_cantor = CANTOR[0]
+                nome_cantor = CANTOR[1]
+                rota = 'cantores/{0}'.format(id_cantor)
+                texto_lista_cantores += '<li class="no-marker"><a href="{0}">{1}</a></li>\n'.format(rota, nome_cantor)
 
-            shia = '''
-            <div class="center">
-            <h2 class="center" style="width:100%">Shia está pistolaço com você >:(</h1>
-            <br/>
-            <iframe src="https://www.youtube.com/embed/Alt0SKEL84M"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen style="width: 100%;resize: horizontal;aspect-ratio: 16 / 9;">
-            </iframe>
-            </div>
-            '''
-
-            return flask.render_template('pagina_inicial.html', lista_materias=texto_lista_materias, shia=shia)
+            return flask.render_template('pagina_inicial.html', lista_materias=texto_lista_cantores)
         except Exception:
             return flask.render_template(
                 '404.html'
             )
 
-    @app.route('/materias/<id_materia>', methods=['GET'])
-    def materias(id_materia):
+    @app.route('/cantores/<id_cantor>', methods=['GET'])
+    def cantores(id_cantores):
         try:
-            nome_materia = query_function('''SELECT nome FROM materias WHERE id_materia = {0}'''.format(id_materia))[0][0]
+            Cantores = query_function('''SELECT nome FROM CANTORES WHERE id_cantor = {0}'''.format(id_cantores))[0][0]
 
-            texto_paragrafos = '<p class="center">Esta é a página da matéria <b>{0}!</b></p><br/>\n'.format(nome_materia)
-            texto_paragrafos += '<p class="center">Veja abaixo os professores que ministraram-na:</p><br/>\n'
+            texto_paragrafos = '<p class="center">Esta é a página de musica <b>{0}!</b></p><br/>\n'.format(Cantores)
+            texto_paragrafos += '<p class="center">Veja os cantores cadastrados em nosso banco:</p><br/>\n'
 
-            professores = query_function('''
+            cantores = query_function('''
                 SELECT p.nome
-                FROM professores p
-                INNER JOIN professores_para_materias ppm on p.id_professor = ppm.id_professor
-                INNER JOIN materias m on ppm.id_materia = m.id_materia
-                WHERE m.id_materia = '{0}';
-            '''.format(id_materia))
+                FROM CANTORES p
+                INNER JOIN CANTOR_ALBUM ppm on p.id_cantor = ppm.id_album
+                INNER JOIN CANTORES m on ppm.id_cantor = m.cantor
+                WHERE m.id_cantor = '{0}';
+            '''.format(id_cantores))
 
             texto_paragrafos += '<ul class="center">\n'
-            for prof in professores:
-                texto_paragrafos += '\t<li>{0}</li>\n'.format(prof[0])
+            for cant in cantores:
+                texto_paragrafos += '\t<li>{0}</li>\n'.format(cant[0])
             texto_paragrafos += '</ul>'
 
+            results = query_function('''SELECT nome, link FROM CANTOR WHERE id = {0};'''.format(id_cantores))
             return flask.render_template(
-                'template_2.html',
-                paragrafo=texto_paragrafos,
-                imagem=''
+                'template_1.html',
+                nome='<p>{0}</p>'.format(results[0][0]),
+                link='<p>{0}</p>'.format(results[0][1])
             )
         except Exception:
             return flask.render_template(
-                '404.html'
-            )
+                    '404.html'
+                )
 
     @app.route('/server_generated_page', methods=['GET'])
     def server_generated_page():
         return flask.render_template(
             'template_2.html',
             paragrafo='<p class="center">Este parágrafo foi renderizado pelo servidor!</p>',
-            imagem='<img class="center" src="' + flask.url_for('static', filename='img/ye_smiling.jpg') + '">'
+            imagem='<img class="center" src="' + flask.url_for('static', filename='IMG/catalyzer_UwU.gif') + '">'
         )
 
     @app.route('/ajax_generated_table', methods=['GET'])

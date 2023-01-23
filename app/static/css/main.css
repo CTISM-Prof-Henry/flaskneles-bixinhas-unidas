@@ -1,7 +1,8 @@
 /*DEFINE COMO TUDO COM ESTA FONTE*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 *{
-  overflow: auto; 
+    overflow: auto;
+    box-sizing: border-box;
 }
 /* ESTILIZAÇÃO BODY */
 body {
@@ -13,9 +14,6 @@ body {
     height: 100vh;
     background-attachment: local;
     background-size: 100%; 
-}
-*{
-  box-sizing: border-box;
 }
 /*ESTILIZAÇAO SOBREPOSIÇÃO DO BACKGROUND*/
 div.container{
@@ -227,7 +225,7 @@ li.no-marker {
 }
 /*LOGIN*/
     .login{
-      margin:center;
+      margin: center;
     }
     input[type='submit']{
       font-family: 'Kanit', sans-serif;
