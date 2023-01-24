@@ -29,49 +29,51 @@ INSERT INTO CANTORES VALUES(017,'Elana Dara', 'BISSEXUAL', 'ELA/DELA', 1);
 
 CREATE TABLE ALBUNS (
             id_album INTEGER NOT NULL,
+            id_cantor INTEGER NOT NULL,
             nome TEXT NOT NULL,
             nome_album TEXT NOT NULL,
             gravadora TEXT NOT NULL,
             ano INTEGER NOT NULL,
-            PRIMARY KEY (id_album)
+            PRIMARY KEY (id_album, id_cantor),
+            FOREIGN KEY (id_cantor) REFERENCES CANTORES(id_cantor)
         );
-INSERT INTO ALBUNS VALUES(101, 'Jão','Pirata', 'Universal', 2021);
-INSERT INTO ALBUNS VALUES(102, 'Jão', 'Anti-Herói', 'Universal', 2019);
-INSERT INTO ALBUNS VALUES(103,'Jão', 'Lobos', 'Universal', 2018);
-INSERT INTO ALBUNS VALUES(104, 'Pabllo Vittar', 'Batidão Tropical', 'Sony', 2021);
-INSERT INTO ALBUNS VALUES(105, 'Pabllo Vittar', 'Vai Passar Mal', 'BMT', 2017);
-INSERT INTO ALBUNS VALUES(106, 'Pabllo Vittar', 'Não para Não', 'Sony', 2018);
-INSERT INTO ALBUNS VALUES(107, 'Glória Groove', 'Affair', 'SB Music', 2020);
-INSERT INTO ALBUNS VALUES(108, 'Glória Groove', 'Lady Leste', 'SB Music', 2022);
-INSERT INTO ALBUNS VALUES(109, 'Linn da Querada', 'Pajubá', 'Badsista', 2017);
-INSERT INTO ALBUNS VALUES(110, 'Renato Russo', 'Que país é esse?', 'EMI', 1987);
-INSERT INTO ALBUNS VALUES(111, 'Renato Russo', 'O Trovador Solitário', 'Discobertas', 2008);
-INSERT INTO ALBUNS VALUES(112, 'Luísa Sonza', 'Pandora', 'Universal', 2019);
-INSERT INTO ALBUNS VALUES(113, 'Luísa Sonza', 'Doce 22', 'Universal', 2022);
-INSERT INTO ALBUNS VALUES(114, 'Cazuza', 'Exagerado', 'Som Livre', 1985);
-INSERT INTO ALBUNS VALUES(115, 'Cazuza', 'Ideologia', 'Philips', 1988);
-INSERT INTO ALBUNS VALUES(116, 'Cazuza', 'Só se for a dois', 'Philips', 1987);
-INSERT INTO ALBUNS VALUES(117, 'Lulu Santos', 'Tempos Modernos', 'Warner', 1982);
-INSERT INTO ALBUNS VALUES(118, 'Lulu Santos', 'O Ritimo do Momento', 'Warner', 1983);
-INSERT INTO ALBUNS VALUES(119, 'Lulu Santos', 'Toda forma de Amor', 'RCA', 1988);
-INSERT INTO ALBUNS VALUES(120, 'Day Limns', 'Day', 'Universal', 2018);
-INSERT INTO ALBUNS VALUES(121, 'Day Limns', 'Bem-vindo Ao Clube', 'Universal', 2021);
-INSERT INTO ALBUNS VALUES(122, 'Day Limns', 'A Culpa é do Meu Signo', 'Universal', 2020);
-INSERT INTO ALBUNS VALUES(123, 'Carol Biazin', 'Beijo de Judas', 'Universal', 2021);
-INSERT INTO ALBUNS VALUES(124, 'Carol Biazin', 'S', 'Universal', 2019);
-INSERT INTO ALBUNS VALUES(125, 'Cássia Eller', 'Relicário', 'Universal', 2012);
-INSERT INTO ALBUNS VALUES(126, 'Cássia Eller', 'Acústico MTV', 'Universal', 2001);
-INSERT INTO ALBUNS VALUES(127, 'Ludmilla', 'Numanice 2', 'Warner', 2022);
-INSERT INTO ALBUNS VALUES(128, 'Ludmilla', 'A Danada sou Eu', 'Warner', 2016);
-INSERT INTO ALBUNS VALUES(129, 'Ludmilla', 'Hello Mundo', 'Warner', 2019);
-INSERT INTO ALBUNS VALUES(130, 'Anitta', 'BANG', 'Warner', 2015);
-INSERT INTO ALBUNS VALUES(131, 'Anitta', 'Anitta', 'Warner', 2013);
-INSERT INTO ALBUNS VALUES(132, 'Anitta', 'Versions of Me', 'Warner', 2022);
-INSERT INTO ALBUNS VALUES(133, 'Danny Bond', 'Épica', 'Danny Bond', 2017);
-INSERT INTO ALBUNS VALUES(134, 'Charmeleo', 'Ecdise', 'Charmeleo', 2021);
-INSERT INTO ALBUNS VALUES(135, 'Charmeleo', 'Utopiataboo', 'Charmeleo', 2019);
-INSERT INTO ALBUNS VALUES(136, 'Gabeu', 'Agropoc', 'Gabeu', 2021);
-INSERT INTO ALBUNS VALUES(137, 'Elana Dara', 'Teoria do Caos', 'Warner', 2021);
+INSERT INTO ALBUNS VALUES(101, 'Jão','Pirata', 'Universal', 2021, 001);
+INSERT INTO ALBUNS VALUES(102, 'Jão', 'Anti-Herói', 'Universal', 2019, 001);
+INSERT INTO ALBUNS VALUES(103,'Jão', 'Lobos', 'Universal', 2018, 001);
+INSERT INTO ALBUNS VALUES(104, 'Pabllo Vittar', 'Batidão Tropical', 'Sony', 2021, 002);
+INSERT INTO ALBUNS VALUES(105, 'Pabllo Vittar', 'Vai Passar Mal', 'BMT', 2017, 002);
+INSERT INTO ALBUNS VALUES(106, 'Pabllo Vittar', 'Não para Não', 'Sony', 2018, 002);
+INSERT INTO ALBUNS VALUES(107, 'Glória Groove', 'Affair', 'SB Music', 2020, 003);
+INSERT INTO ALBUNS VALUES(108, 'Glória Groove', 'Lady Leste', 'SB Music', 2022, 003);
+INSERT INTO ALBUNS VALUES(109, 'Linn da Querada', 'Pajubá', 'Badsista', 2017, 004);
+INSERT INTO ALBUNS VALUES(110, 'Renato Russo', 'Que país é esse?', 'EMI', 1987, 005);
+INSERT INTO ALBUNS VALUES(111, 'Renato Russo', 'O Trovador Solitário', 'Discobertas', 2008, 005);
+INSERT INTO ALBUNS VALUES(112, 'Luísa Sonza', 'Pandora', 'Universal', 2019, 006);
+INSERT INTO ALBUNS VALUES(113, 'Luísa Sonza', 'Doce 22', 'Universal', 2022, 006);
+INSERT INTO ALBUNS VALUES(114, 'Cazuza', 'Exagerado', 'Som Livre', 1985, 007);
+INSERT INTO ALBUNS VALUES(115, 'Cazuza', 'Ideologia', 'Philips', 1988, 007);
+INSERT INTO ALBUNS VALUES(116, 'Cazuza', 'Só se for a dois', 'Philips', 1987, 007);
+INSERT INTO ALBUNS VALUES(117, 'Lulu Santos', 'Tempos Modernos', 'Warner', 1982, 008);
+INSERT INTO ALBUNS VALUES(118, 'Lulu Santos', 'O Ritimo do Momento', 'Warner', 1983, 008);
+INSERT INTO ALBUNS VALUES(119, 'Lulu Santos', 'Toda forma de Amor', 'RCA', 1988, 008);
+INSERT INTO ALBUNS VALUES(120, 'Day Limns', 'Day', 'Universal', 2018, 009);
+INSERT INTO ALBUNS VALUES(121, 'Day Limns', 'Bem-vindo Ao Clube', 'Universal', 2021, 009);
+INSERT INTO ALBUNS VALUES(122, 'Day Limns', 'A Culpa é do Meu Signo', 'Universal', 2020, 009);
+INSERT INTO ALBUNS VALUES(123, 'Carol Biazin', 'Beijo de Judas', 'Universal', 2021, 010);
+INSERT INTO ALBUNS VALUES(124, 'Carol Biazin', 'S', 'Universal', 2019, 010);
+INSERT INTO ALBUNS VALUES(125, 'Cássia Eller', 'Relicário', 'Universal', 2012, 011);
+INSERT INTO ALBUNS VALUES(126, 'Cássia Eller', 'Acústico MTV', 'Universal', 2001, 011);
+INSERT INTO ALBUNS VALUES(127, 'Ludmilla', 'Numanice 2', 'Warner', 2022, 012);
+INSERT INTO ALBUNS VALUES(128, 'Ludmilla', 'A Danada sou Eu', 'Warner', 2016, 012);
+INSERT INTO ALBUNS VALUES(129, 'Ludmilla', 'Hello Mundo', 'Warner', 2019, 012);
+INSERT INTO ALBUNS VALUES(130, 'Anitta', 'BANG', 'Warner', 2015, 013);
+INSERT INTO ALBUNS VALUES(131, 'Anitta', 'Anitta', 'Warner', 2013, 013);
+INSERT INTO ALBUNS VALUES(132, 'Anitta', 'Versions of Me', 'Warner', 2022, 013);
+INSERT INTO ALBUNS VALUES(133, 'Danny Bond', 'Épica', 'Danny Bond', 2017, 014);
+INSERT INTO ALBUNS VALUES(134, 'Charmeleo', 'Ecdise', 'Charmeleo', 2021, 015);
+INSERT INTO ALBUNS VALUES(135, 'Charmeleo', 'Utopiataboo', 'Charmeleo', 2019, 015);
+INSERT INTO ALBUNS VALUES(136, 'Gabeu', 'Agropoc', 'Gabeu', 2021, 016);
+INSERT INTO ALBUNS VALUES(137, 'Elana Dara', 'Teoria do Caos', 'Warner', 2021, 017);
 
 CREATE TABLE TOP_5 (
             id_cantor INTEGER NOT NULL,

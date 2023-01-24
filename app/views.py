@@ -22,58 +22,33 @@ def main(app: flask.app.Flask) -> flask.app.Flask:
     @app.route('/')
     def initial_page():
         try:
-            CANTOR = query_function('''SELECT Id_cantor, nome FROM CANTORES''')
+            CANTOR = query_function('''SELECT id_cantor, nome FROM CANTORES''')
             texto_lista_cantores = ''
             for CANTOR in CANTOR:
                 id_cantor = CANTOR[0]
                 nome_cantor = CANTOR[1]
-                rota = 'cantores/{0}'.format(id_cantor)
-                texto_lista_cantores += '<li class="no-marker"><a href="{0}">{1}</a></li>\n'.format(rota, nome_cantor)
-
-            return flask.render_template('pagina_inicial.html', lista_materias=texto_lista_cantores)
+                conta = len(nome_cantor) + 7
+            texto_lista_cantores += '<li class="no-marker"><a>Servidor Informa: No momento possuimos {1} cantores cadastrados</a></li>\n'.format(id_cantor, conta)
+            return flask.render_template('pagina_inicial.html', lista_cantores=texto_lista_cantores)
         except Exception:
             return flask.render_template(
                 '404.html'
             )
-
-    @app.route('/cantores/<id_cantor>', methods=['GET'])
-    def cantores(id_cantores):
-        try:
-            Cantores = query_function('''SELECT nome FROM CANTORES WHERE id_cantor = {0}'''.format(id_cantores))[0][0]
-
-            texto_paragrafos = '<p class="center">Esta é a página de musica <b>{0}!</b></p><br/>\n'.format(Cantores)
-            texto_paragrafos += '<p class="center">Veja os cantores cadastrados em nosso banco:</p><br/>\n'
-
-            cantores = query_function('''
-                SELECT p.nome
-                FROM CANTORES p
-                INNER JOIN CANTOR_ALBUM ppm on p.id_cantor = ppm.id_album
-                INNER JOIN CANTORES m on ppm.id_cantor = m.cantor
-                WHERE m.id_cantor = '{0}';
-            '''.format(id_cantores))
-
-            texto_paragrafos += '<ul class="center">\n'
-            for cant in cantores:
-                texto_paragrafos += '\t<li>{0}</li>\n'.format(cant[0])
-            texto_paragrafos += '</ul>'
-
-            results = query_function('''SELECT nome, link FROM CANTOR WHERE id = {0};'''.format(id_cantores))
-            return flask.render_template(
-                'template_1.html',
-                nome='<p>{0}</p>'.format(results[0][0]),
-                link='<p>{0}</p>'.format(results[0][1])
-            )
-        except Exception:
-            return flask.render_template(
-                    '404.html'
-                )
-
     @app.route('/server_generated_page', methods=['GET'])
     def server_generated_page():
         return flask.render_template(
             'template_2.html',
-            paragrafo='<p class="center">Este parágrafo foi renderizado pelo servidor!</p>',
-            imagem='<img class="center" src="' + flask.url_for('static', filename='IMG/catalyzer_UwU.gif') + '">'
+            Preferidos ='<p class="center">Confira algumas musicas e artistas muito amados pela comunidade LGBTQIA+ </p>',
+            Video_1 = '<p>I Kissed a Girl - Katy Perry</p><iframe width="560" height="315" src="https://www.youtube.com/embed/tAp9BKosZXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_2 = '<p>Physical - Dua Lipa</p><iframe width="560" height="315" src="https://www.youtube.com/embed/9HDEHj2yzew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_3 = '<p>Expectations - Lauren Jauregui</p><iframe width="560" height="315" src="https://www.youtube.com/embed/RHXdA-ZkEsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_4 = '<p> All To Well - Thaylor Swift</p><iframe width="560" height="315" src="https://www.youtube.com/embed/sRxrwjOtIag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_5 = '<p> Say my name- destiny’s child</p><iframe width="560" height="315" src="https://www.youtube.com/embed/sQgd6MccwZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_6 = '<p> Sorry not Sorry - Demi Lovato </p><iframe width="560" height="315" src="https://www.youtube.com/embed/-MsvER1dpjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_7 = '<p>Poker Face - Lady Gaga </p><iframe width="560" height="315" src="https://www.youtube.com/embed/bESGLojNYSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_8 = '<p>I wanna be ur girlfrend - Girl in red</p><iframe width="560" height="315" src="https://www.youtube.com/embed/A7N_L7126Pk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_9 = '<p> Umbrella - Rihanna</p><iframe width="560" height="315" src="https://www.youtube.com/embed/CvBfHwUxHIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            Video_10 = '<p>Despechá - Rosalia </p><iframe width="560" height="315" src="https://www.youtube.com/embed/5g2hT4GmAGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
         )
 
     @app.route('/ajax_generated_table', methods=['GET'])

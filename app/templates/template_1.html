@@ -18,7 +18,7 @@
       <nav>
             <div class="logo">
 
-                <h4><a class="inicio_class">PAGINA INICIA </a></h4>
+                <h4><a class="inicio_class">PAGINA INICIAL </a></h4>
             </div>
             <ul class="nav-links"> 
                 <li class="no-marker"><a href="{{ url_for('server_generated_page') }}">Server Page</a></li>
@@ -30,23 +30,22 @@
             </div>
           </nav>
     <h1 class="center">Está na hora de ouvir música!</h1>
-    <img alt="the_web_diva" class="center" src="{{ url_for('static', filename='img/the_web_diva.jpg') }}">
-    <img class="imagem1" src="../static/img/catalyzer_UwU.gif" alt="">
     <p>
-        Escolha aqui se quiser dar uma checada nos artistas que compõem nossa seleção, conhecer um pouco de sua discografia ou escutar seus maiores hits!
+        Escolha aqui se quiser dar uma checada nos artistas que compõem nossa seleção,
+        conhecer um pouco de sua discografia ou escutar seus maiores hits!
     </p>
     <form id="table_select" action="http://localhost:5000/generete_table" method="POST"></form>
     <label for="select_tables"> </label>
     <select name="select_tables" id="select_tables">
         <option value="cantores">Cantores </option>
         <option value="albuns">Albúns</option>
-        <option value="hits">Maiores hits</option>
-        <option value="ids">Cantores e albuns (ids)</option>
+        <option value="top_5">TOP 5</option>
+        <option value="cantor_album">Cantores e albuns</option>
     </select>
     <button id="button_table_select">Confirmar</button>
     <button id="alerta" onclick="alerta_vermelho()">Alerta</button>
 
-    <table id="answer_table">
+    <table id="answer_table" >
     </table>
 
 </div>
@@ -103,5 +102,4 @@
     });
 });
 </script>
-<!-- código AJAX -->
 </html>

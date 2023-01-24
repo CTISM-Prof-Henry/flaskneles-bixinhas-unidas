@@ -39,6 +39,9 @@ div.container{
     margin: auto;
     width: 50%;
 }
+ul.no-marker{
+    position: center;
+}
 /* ESTILIZAÇÃO TODOS OS TITULOS H1 CENTER*/
 h1.center {
     text-align: center;
@@ -282,4 +285,20 @@ li.no-marker {
       align-items: center;
       display: flex;
     }
+/*TABELA PAGINA AJAX*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+    border-color: 	#000000;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #000000;
+}
